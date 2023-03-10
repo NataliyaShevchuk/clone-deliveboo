@@ -25,8 +25,10 @@ class DishTableSeeder extends Seeder
                 "description" => $faker->sentence(),
                 "price" => rand(5, 50),
                 "hide" => true,
-                "restaurant_id" => 1,
+                "restaurant_id" => $restaurants->increment('id'),
             ]);  
+
+            
                 // $dish = new Dish;
                 // $dish->name = $faker->realText();
                 // $dish->cover_img = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ffake&psig=AOvVaw1R6I2ndtPZoAGipwf114Ir&ust=1677859908776000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDz27DRvf0CFQAAAAAdAAAAABAD";
